@@ -21,9 +21,8 @@ app.post("/extract-text", (req, res) => {
 
 function extractHindi(text) {
     const hindiRegex = /[\u0900-\u097F]+/g;
-
     const hindiCharacters = text.match(hindiRegex) || [];
-    const hindiText = hindiCharacters.join(", ");
+    const hindiText = hindiCharacters.join(" ");
     
     return hindiText;
 }
